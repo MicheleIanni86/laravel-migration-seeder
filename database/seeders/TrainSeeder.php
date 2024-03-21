@@ -22,7 +22,7 @@ class TrainSeeder extends Seeder
         while (!feof($file)) {
             $train_data = fgetcsv($file);
             if (!$first_line) {
-                                               
+                                             
                 $train = new Train;
                 $train->company = $train_data[0];
                 $train->departure_station = $train_data[1];
@@ -34,7 +34,7 @@ class TrainSeeder extends Seeder
                 $train->on_time = $train_data[7];
                 $train->cancelled = $train_data[8];
                 
-                $train->save();
+                $train->save();  
             }
             
           

@@ -11,7 +11,7 @@ class Pagecontroller extends Controller
     // metodo che mostra la home page(in questo casa lòista dei treni)
  public function index() 
  {
-    $trains = Train::whereDate('departure_time', today()->toDateString())->get();
+    $trains = Train::orderBy("departure_time", "asc")->get();
     return view("home", compact("trains"));
  }
 }
