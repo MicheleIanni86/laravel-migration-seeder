@@ -6,17 +6,17 @@
 
   <section>
 
-    <div class="container py-4">
+    <div class="container py-4 ">
 
-      <h1>Lista Treni</h1>
+      <h1 class="text-center mb-5">Lista Treni</h1>
 
-      <div class="container">
+      <div class="container ">
 
       
-        <div class="row gx-3">
+        <div class="row gy-3 justify-content-center">
 
           @foreach ($trains as $train)
-            <div class="col-4 text-start">
+            <div class="col-7 text-start">
               
               <div class="card p-3 bg-warning text-dark">
                 <h2><strong>Azienda: </strong>{{ $train->company }}</h2>
@@ -25,7 +25,8 @@
                 <h4><strong>Orario di partenza: </strong>{{ $train->departure_time }}</h4>
                 <h4><strong>Orario di arrivo: </strong>{{ $train->arrival_time }}</h4>
                 <h5><strong>Codice Treno: </strong>{{ $train->train_code }}</h5>
-                <h5><strong>Numero Carrozze: </strong>{{ $train->number_of_carriages }}</h5>
+                <h5><strong>In Orario: </strong>{{ $train->on_time ? 'Si' : 'No' }}</h5>
+                <h5><strong>Cancellato: </strong>{{ $train->cancelled ? 'Si' : 'No'  }}</h5>
               </div>
                 
             </div>
