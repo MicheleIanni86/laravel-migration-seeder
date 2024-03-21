@@ -1,0 +1,7 @@
+"company","departure_station","arrival_station","departure_time","arrival_time","train_code","number_of_carriages","on_time","cancelled"
+"Trenitalia","Roma Termini","Bari","2024-03-21 08:00:00","2024-03-21 12:00:00","TR123",8,0,0
+"Trenitalia","Bari","Termoli","2024-02-11 08:00:00","2024-03-21 12:00:00","T234R",9,0,0
+"Trenitalia","Roma","Bari","2024-11-29 08:00:00","2024-03-21 12:00:00","ZW231",8,0,0
+"Trenitalia","Milano","Palermo","2024-12-11 08:00:00","2024-03-21 12:00:00","BT443",6,0,0
+"Trenitalia","Catania","Piacenza","2024-05-21 08:00:00","2024-03-21 12:00:00","HTXV3",4,0,0
+"Trenitalia","Palermo","Sassari","2024-03-23 08:00:00","2024-03-21 12:00:00","HY444",3,0,0

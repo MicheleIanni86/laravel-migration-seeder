@@ -26,8 +26,8 @@
                 <h4><strong>Orario di arrivo: </strong>{{ $train->arrival_time }}</h4>
                 <h5><strong>Codice Treno: </strong>{{ $train->train_code }}</h5>
                 <h5><strong>Numero Carrozza: </strong>{{ $train->number_of_carriages }}</h5>
-                <p><strong>In Orario: </strong>{{ $train->on_time ? 'Si' : 'No' }}</p>
-                <p><strong>Cancellato: </strong>{{ $train->cancelled ? 'Si' : 'No'  }}</p>
+                <p class="m-0"><strong>In Orario: </strong>{{ $train->on_time ? 'Si' : 'No' }}</p>
+                <p class="m-0"><strong>Cancellato: </strong>{{ $train->cancelled ? 'Si' : 'No'  }}</p>
               </div>
                 
             </div>

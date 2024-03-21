@@ -15,18 +15,39 @@ class TrainSeeder extends Seeder
      */
     public function run()
     {
-        $train = new Train();
 
-        $train->company = "Trenitalia";
-        $train->departure_station = "Roma Termini";
-        $train->arrival_station = "Milano Centrale";
-        $train->departure_time = "2024-03-21 08:00:00";
-        $train->arrival_time = "2024-03-21 12:00:00";
-        $train->train_code = "TR123";
-        $train->number_of_carriages= 8;
-        $train->on_time = 0;
-        $train->cancelled = 0;
+        $file = fopen(__DIR__ . "/../csv/train.csv","r");
 
-        $train->save();
+        $first_line = true;
+        while (!feof($file)) {
+            $train_data = fgetcsv($file);
+            if (!$first_line) {
+                                               
+                $train = new Train;
+                $train->company = $train_data[0];
+                $train->departure_station = $train_data[1];
+                $train->arrival_station = $train_data[2];
+                $train->departure_time = $train_data[3];
+                $train->arrival_time = $train_data[4];
+                $train->train_code = $train_data[5];
+                $train->number_of_carriages= $train_data[6];
+                $train->on_time = $train_data[7];
+                $train->cancelled = $train_data[8];
+                
+                $train->save();
+            }
+            
+          
+            $first_line = false;
+        }
+        
+       
+
+
+        // foreach ($trains_data as $train_data) {
+
+        // $train->fill($train_data);
+
+
     }
 }
